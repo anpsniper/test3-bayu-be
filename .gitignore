@@ -1,0 +1,41 @@
+# Compiled binaries and executables
+*.exe
+*.bin
+*.out
+
+# Go build cache
+.cache/
+go.sum
+go.mod.bak # Sometimes created during module operations
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE-specific files (examples, adjust for your IDE)
+.idea/             # IntelliJ IDEA
+.vscode/           # VS Code
+*.iml              # IntelliJ IDEA module files
+.DS_Store          # macOS specific
+Thumbs.db          # Windows specific
+
+# Dependency directories
+vendor/ # If you're not using Go modules in "vendor" mode, you might ignore this.
+        # However, with Go modules, `go.sum` and `go.mod` are usually enough.
+
+# Test and coverage files
+*.test
+*.prof
+coverage.out
+
+# Log files
+*.log
+
+# Database specific files (e.g., if you have local SQLite files)
+*.db
+*.sqlite3
+
+# Temporary files
+*~
+*.tmp
