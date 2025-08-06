@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"your-go-fiber-app/database" // Adjust import path to your module name
-	"your-go-fiber-app/models"   // Adjust import path to your module name
+	"github.com/anpsniper/test3-bayu-be/database" // Adjust import path to your module name
+	"github.com/anpsniper/test3-bayu-be/models"   // Adjust import path to your module name
 
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm" // Import gorm for error checking like ErrRecordNotFound

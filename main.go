@@ -1,9 +1,9 @@
-//main.go
-
+// main.go
 package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/anpsniper/test3-bayu-be/database"
 	"github.com/anpsniper/test3-bayu-be/models"
@@ -11,43 +11,6 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
-)
-
-func main() {
-	// Load environment variables
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
-	// Connect to database and run migrations
-	database.ConnectDB()
-	database.DB.AutoMigrate(&models.Product{}, &models.User{})
-
-	// Initialize Fiber app
-	app := fiber.New()
-
-	// Setup API routes
-	routes.SetupRoutes(app)
-
-	// Start the server
-	log.Fatal(app.Listen(":3000"))
-}
-
-
-package main
-
-import (
-	"log"
-	"os" // Used to get environment variables
-
-	// Import your custom packages based on your module name (replace 'your-go-fiber-app')
-	"github.com/anpsniper/test3-bayu-be/database"
-	"github.com/anpsniper/test3-bayu-be/models"
-	"github.com/anpsniper/test3-bayu-be/routes"
-
-	"github.com/gofiber/fiber/v2"      // Fiber framework
-	"github.com/joho/godotenv"         // For loading .env files
 )
 
 func main() {
